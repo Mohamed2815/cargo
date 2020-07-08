@@ -1,0 +1,127 @@
+// Start Footer
+.footer {
+	padding: $mainPadding;
+	@include small-screen-padding;
+	background-color: #333333;
+
+	.footer-heading {
+		font-size: 16px;
+		color: #fff;
+		margin-bottom: 1.5em;
+		font-family: "Oswald", sans-serif;
+	}
+
+	p {
+		color: #fff;
+		margin-bottom: 1em;
+		font-family: "Rubik", sans-serif;
+		line-height: 1.7;
+	}
+
+	.links {
+		@media (max-width: 575.98px) {
+			h2 {
+				margin-top: 1em;
+			}
+		}
+		li {
+			margin-bottom: 10px;
+
+			a {
+				color: rgba(255, 255, 255, 0.5);
+				text-decoration: none;
+				font-family: "Rubik", sans-serif;
+				transition: all 0.3s ease;
+
+				&:hover,
+				&:focus {
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	.newsletter {
+		margin-bottom: 3em;
+		@media (max-width: 575.98px) {
+			margin-top: 1em;
+		}
+		.footer-suscribe-form {
+			display: flex;
+			.input-group {
+				input {
+					border-top-right-radius: 0;
+					border-bottom-right-radius: 0;
+					border: 1px solid transparent;
+					outline: none;
+					height: 55px;
+					margin-bottom: 0;
+					font-family: "Rubik", sans-serif;
+					padding: 0.375em 0.75em;
+				}
+			}
+			.input-group-append {
+				button {
+					font-size: 1rem;
+					font-weight: 400;
+					font-family: "Rubik", sans-serif;
+					background-color: $mainColor;
+					border: 1px solid transparent;
+					outline: none;
+					padding: 0.375em 0.75em;
+					user-select: none;
+					border-top-left-radius: 0;
+					border-bottom-left-radius: 0;
+					margin-bottom: 0;
+					transition: all 0.3s ease;
+					&:hover {
+						background-color: #dc7b08;
+					}
+				}
+			}
+		}
+	}
+	.social {
+		color: rgba(255, 255, 255, 0.5);
+		.fa-facebook-f {
+			transition: all 0.3s ease;
+			&:hover {
+				color: #3b5998;
+			}
+		}
+		.fa-twitter {
+			transition: all 0.3s ease;
+			&:hover {
+				color: #1da1f2;
+			}
+		}
+		.fa-instagram {
+			transition: all 0.3s ease;
+			&:hover {
+				color: #fd1d1d;
+			}
+		}
+		.fa-linkedin-in {
+			transition: all 0.3s ease;
+			&:hover {
+				color: #00a0dc;
+			}
+		}
+	}
+	.copyright {
+		padding-top: 3em;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+		p {
+			font-size: 1rem;
+			font-family: "Rubik", sans-serif;
+			a {
+				color: rgba(255, 255, 255, 0.5);
+				text-decoration: none;
+				transition: all 0.3s ease;
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,80 @@
+// Start Global Rules
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	@include links-font;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@include main-font;
+	font-weight: 400;
+	color: #000;
+}
+p {
+	line-height: 1.7;
+	@include links-font;
+	color: $paraColor;
+}
+@media (max-width: 991.98px) {
+	.body-overlay {
+		@include body-overlay;
+	}
+}
+
+ul {
+	list-style: none;
+}
+
+@media (max-width: 991.98px) {
+	* {
+		animation: none !important;
+	}
+}
+
+// Start Scroll Bar
+@media (min-width: 991.98px) {
+	/* width */
+	::-webkit-scrollbar {
+		width: 6px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		border-radius: 5px;
+		background-color: #fff;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: $mainColor;
+		border-radius: 6px;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #ffa438;
+	}
+}
+
+// Start OWl Dots
+.owl-dots {
+	margin-top: 2em !important;
+}
+.owl-theme .owl-dots .owl-dot span {
+	transition: all 0.3s ease;
+}
+.owl-theme .owl-dots .owl-dot.active span {
+	background-color: $mainColor !important;
+}
+.owl-theme .owl-dots .owl-dot {
+	outline: none !important;
+}
