@@ -24,7 +24,7 @@
 	}
 
 	if ($(window).width() <= 991) {
-		$(".navbar .navbar-nav .slideDownMenu").click(function () {
+		$(".navbar .navbar-nav .slideDownMenu").click(function (e) {
 			$(this).find(".dropdown-menu").slideToggle();
 			e.stopPropagation();
 		});
