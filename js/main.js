@@ -1,5 +1,20 @@
 (function () {
 	"use strict";
+	// ScrollUp Button
+	let scrollUp = $(".scrollUp");
+	$(window).scroll(function () {
+		if ($(window).scrollTop() >= 1000) {
+			scrollUp.fadeIn()
+		} else {
+			scrollUp.fadeOut()
+		}
+	});
+	scrollUp.click(function (e) {
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop: 0
+		}, 1000);
+	});
 	// Trigger WoW.js
 	if ($(window).width() >= 992) {
 		new WOW().init();
@@ -56,8 +71,7 @@
 	// Smoothly Scroll To Section
 	$(".nav-link").click(function (e) {
 		e.preventDefault();
-		$("html, body").animate(
-			{
+		$("html, body").animate({
 				scrollTop: $("#" + $(this).data("scroll")).offset().top,
 			},
 			1000
